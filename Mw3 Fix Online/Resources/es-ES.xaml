@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="title">Arreglar Mw3 en línea</system:String>
+    <system:String x:Key="connect">Conexión</system:String>
+    <system:String x:Key="connectTooltip">Conexión a tu ps3</system:String>
+    <system:String x:Key="refresh">Refresh</system:String>
+    <system:String x:Key="fixAccount">Arreglar mi cuenta con la cuenta seleccionada</system:String>
+    <system:String x:Key="success">Éxito..</system:String>
+    <system:String x:Key="successAttached">Adjunto con éxito a</system:String>
+    <system:String x:Key="wrongProcess">Proceso incorrecto...</system:String>
+    <system:String x:Key="thisProcess">The process is</system:String>
+    <system:String x:Key="attachFailed">Adjuntar falló..</system:String>
+    <system:String x:Key="unableAttach">No se puede adjuntar el proceso.</system:String>
+    <system:String x:Key="connectFailed">Connect failed..</system:String>
+    <system:String x:Key="unableConnect">No se puede conectar a PS3.</system:String>
+    <system:String x:Key="refreshAccountTooltip">Actualizar jugadores guardados</system:String>
+    <system:String x:Key="deleteAccountTooltip">Eliminar esta cuenta</system:String>
+    <system:String x:Key="refreshPlayersTooltip">Actualizar jugadores</system:String>
+    <system:String x:Key="addPlayer">Agregar cuenta(s) a la lista</system:String>
+    <system:String x:Key="addPlayerTooltip">Agregar jugador(es) a la lista de guardar</system:String>
+    <system:String x:Key="fixAccountOnly">Usar solo cuenta</system:String>
+    <system:String x:Key="fixAccountTooltip">Usa la información del jugador seleccionado</system:String>
+    <system:String x:Key="mainPlayer">Jugador principal</system:String>
+    <system:String x:Key="controller2">Controladora 2</system:String>
+    <system:String x:Key="controller3">Controladora 3</system:String>
+    <system:String x:Key="controller4">Controladora 4</system:String>
+    <system:String x:Key="keepCurrentName">Mantener el nombre actual</system:String>
+</ResourceDictionary>

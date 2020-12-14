@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="title">Correctif Mw3 en ligne</system:String>
+    <system:String x:Key="connect">Connexion</system:String>
+    <system:String x:Key="connectTooltip">Connexion à votre ps3</system:String>
+    <system:String x:Key="refresh">Rafraîchir</system:String>
+    <system:String x:Key="fixAccount">Fixer mon compte avec le compte sélectionné</system:String>
+    <system:String x:Key="success">Succès..</system:String>
+    <system:String x:Key="successAttached">Attaché avec succès à</system:String>
+    <system:String x:Key="wrongProcess">Mauvais processus...</system:String>
+    <system:String x:Key="thisProcess">The process is</system:String>
+    <system:String x:Key="attachFailed">Le processus est..</system:String>
+    <system:String x:Key="unableAttach">Impossible de joindre le processus.</system:String>
+    <system:String x:Key="connectFailed">Echec de connexion..</system:String>
+    <system:String x:Key="unableConnect">Impossible de se connecter à la PS3.</system:String>
+    <system:String x:Key="refreshAccountTooltip">Actualiser les joueurs enregistrés</system:String>
+    <system:String x:Key="deleteAccountTooltip">Supprimer ce compte</system:String>
+    <system:String x:Key="refreshPlayersTooltip">Rafraîchir les joueurs</system:String>
+    <system:String x:Key="addPlayer">Ajouter un/des compte(s) à la liste</system:String>
+    <system:String x:Key="addPlayerTooltip">Ajouter le(s) joueur(s) a la liste de sauvegarde</system:String>
+    <system:String x:Key="fixAccountOnly">Utiliser uniquement le compte</system:String>
+    <system:String x:Key="fixAccountTooltip">Utiliser les informations du joueur sélectionné</system:String>
+    <system:String x:Key="mainPlayer">Joueur principal</system:String>
+    <system:String x:Key="controller2">Manette 2</system:String>
+    <system:String x:Key="controller3">Manette 3</system:String>
+    <system:String x:Key="controller4">Manette 4</system:String>
+    <system:String x:Key="keepCurrentName">Garder le nom actuel</system:String>
+</ResourceDictionary>

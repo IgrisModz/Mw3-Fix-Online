@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="title">Mw3 fix online</system:String>
+    <system:String x:Key="connect">Connection</system:String>
+    <system:String x:Key="connectTooltip">Connection to your ps3</system:String>
+    <system:String x:Key="refresh">Refresh</system:String>
+    <system:String x:Key="fixAccount">Fix my account with the selected account</system:String>
+    <system:String x:Key="success">Success..</system:String>
+    <system:String x:Key="successAttached">Successfully attached to</system:String>
+    <system:String x:Key="wrongProcess">Wrong process...</system:String>
+    <system:String x:Key="thisProcess">The process is</system:String>
+    <system:String x:Key="attachFailed">Attach failed..</system:String>
+    <system:String x:Key="unableAttach">Unable to attach process.</system:String>
+    <system:String x:Key="connectFailed">Connect failed..</system:String>
+    <system:String x:Key="unableConnect">Unable to connect to PS3.</system:String>
+    <system:String x:Key="refreshAccountTooltip">Refresh saved players</system:String>
+    <system:String x:Key="deleteAccountTooltip">Delete this account</system:String>
+    <system:String x:Key="refreshPlayersTooltip">Refresh players</system:String>
+    <system:String x:Key="addPlayer">Add account(s) to list</system:String>
+    <system:String x:Key="addPlayerTooltip">Add player(s) to the save list</system:String>
+    <system:String x:Key="fixAccountOnly">Use account only</system:String>
+    <system:String x:Key="fixAccountTooltip">Use selected player info</system:String>
+    <system:String x:Key="mainPlayer">Main player</system:String>
+    <system:String x:Key="controller2">Controller 2</system:String>
+    <system:String x:Key="controller3">Controller 3</system:String>
+    <system:String x:Key="controller4">Controller 4</system:String>
+    <system:String x:Key="keepCurrentName">Keep current name</system:String>
+</ResourceDictionary>

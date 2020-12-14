@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="title">Mw3 online reparieren</system:String>
+    <system:String x:Key="connect">Verbinde</system:String>
+    <system:String x:Key="connectTooltip">Verbindung zu Ihrem ps3</system:String>
+    <system:String x:Key="refresh">Wiederholen</system:String>
+    <system:String x:Key="fixAccount">Korrigieren Sie mein Konto mit dem ausgewählten Konto</system:String>
+    <system:String x:Key="success">Erfolg..</system:String>
+    <system:String x:Key="successAttached">Erfolgreich verbunden mit</system:String>
+    <system:String x:Key="wrongProcess">Falscher Prozess...</system:String>
+    <system:String x:Key="thisProcess">Der Prozess ist</system:String>
+    <system:String x:Key="attachFailed">Anhängen fehlgeschlagen..</system:String>
+    <system:String x:Key="unableAttach">Prozess kann nicht angehängt werden.</system:String>
+    <system:String x:Key="connectFailed">Verbindung fehlgeschlagen..</system:String>
+    <system:String x:Key="unableConnect">Verbindung zu PS3 nicht möglich.</system:String>
+    <system:String x:Key="refreshAccountTooltip">Aktualisieren Sie gespeicherte Spieler</system:String>
+    <system:String x:Key="deleteAccountTooltip">Löschen Sie dieses Konto</system:String>
+    <system:String x:Key="refreshPlayersTooltip">Spieler aktualisieren</system:String>
+    <system:String x:Key="addPlayer">Konten zur Liste hinzufügen</system:String>
+    <system:String x:Key="addPlayerTooltip">Fügen Sie der Speicherliste Spieler hinzu</system:String>
+    <system:String x:Key="fixAccountOnly">Nur Konto verwenden</system:String>
+    <system:String x:Key="fixAccountTooltip">Verwenden Sie ausgewählte Spielerinformationen</system:String>
+    <system:String x:Key="mainPlayer">Hauptspieler</system:String>
+    <system:String x:Key="controller2">Regler 2</system:String>
+    <system:String x:Key="controller3">Regler 3</system:String>
+    <system:String x:Key="controller4">Regler 4</system:String>
+    <system:String x:Key="keepCurrentName">Behalten Sie den aktuellen Namen</system:String>
+</ResourceDictionary>
