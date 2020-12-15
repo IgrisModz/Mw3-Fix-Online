@@ -18,7 +18,7 @@
         public static uint[] LocalZipcode_a => new uint[]
         {
             0x731474,
-            Core.Grabber.NHG_Client(Functions.IsInParty, Grabber.ZIPCode) + GrabberInterval * Functions.MyIndex,
+            Core.Grabber.NHG_Client(Functions.IsInParty, Grabber.Zipcode) + GrabberInterval * Functions.MyIndex,
         };
 
         public static uint[] LocalXUID_a => new uint[]
@@ -67,7 +67,7 @@
             InternalIP = 0x10C,
             Port = 0x122,
             NatType = 0x144,
-            ZIPCode = 0x40,
+            Zipcode = 0x40,
             XUID = 0x148,
             PartyID = 0x04,
             Micro = 0x75,

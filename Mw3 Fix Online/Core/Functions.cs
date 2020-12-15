@@ -1,5 +1,4 @@
 ﻿using IgrisLib;
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -119,7 +118,7 @@ namespace Mw3_Fix_Online.Core
                     {
                         Name = name,
                         XUID = xuid,
-                        ZipCode = zipcode
+                        Zipcode = zipcode
                     });
             }
             return players;

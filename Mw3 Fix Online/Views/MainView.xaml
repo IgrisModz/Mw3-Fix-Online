@@ -112,7 +112,12 @@
                 </StackPanel>
             </Button>
             <ListBox x:Name="playersListBox" Grid.Row="3" Grid.ColumnSpan="3" Margin="3" SelectionMode="Extended"
-                             ItemsSource="{Binding Players}" SelectedValue="{Binding SelectedPlayer, Mode=TwoWay}">
+                             ItemsSource="{Binding Players}" SelectedItem="{Binding SelectedPlayer, Mode=TwoWay}">
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}" BasedOn="{StaticResource MahApps.Styles.ListBoxItem}">
+                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <DockPanel Width="320">
@@ -129,13 +134,13 @@
                                 <iconPacks:PackIconMaterialDesign Kind="GroupAdd"/>
                             </MenuItem.Icon>
                         </MenuItem>
-                        <MenuItem x:Name="keepCurrentNameChI" Header="{DynamicResource keepCurrentName}" IsCheckable="True">
+                        <MenuItem x:Name="keepCurrentNameChI" Header="{DynamicResource keepCurrentName}" IsCheckable="True" IsChecked="{Binding KeepNameWithSelectedPlayer}">
                             <MenuItem.Icon>
                                 <iconPacks:PackIconMaterialDesign Kind="SupervisorAccount"/>
                             </MenuItem.Icon>
                         </MenuItem>
                         <MenuItem x:Name="fixWithSelectedPlayerBtn" Header="{DynamicResource fixAccountOnly}"
-                                  Command="{Binding FixWithSelectedPlayerCommand}" CommandParameter="{Binding IsChecked, ElementName=keepCurrentNameChI}"
+                                  Command="{Binding FixWithSelectedPlayerCommand}" CommandParameter="{Binding KeepNameWithSelectedPlayer}"
                                   ToolTip="{DynamicResource fixAccountTooltip}">
                             <MenuItem.Icon>
                                 <iconPacks:PackIconMaterialDesign Kind="Send"/>

@@ -47,7 +47,7 @@ namespace Mw3_Fix_Online.Core
                         Name = name,
                         ExternalIp = ReadIPAddress((uint)Addresses.Grabber.ExternalIP + interval),
                         XUID = xuid,
-                        ZipCode = Extension.ReadString((uint)Addresses.Grabber.ZIPCode + interval)
+                        Zipcode = Extension.ReadString((uint)Addresses.Grabber.Zipcode + interval)
                     });
                 }
             }

@@ -35,9 +35,11 @@ namespace Mw3_Fix_Online.ViewModels
 
         public ObservableCollection<Player> Players { get => GetValue(() => Players); set => SetValue(() => Players, value); }
 
-        public List<object> SelectedPlayer { get => GetValue(() => SelectedPlayer); set => SetValue(() => SelectedPlayer, value); }
+        public Player SelectedPlayer { get => GetValue(() => SelectedPlayer); set => SetValue(() => SelectedPlayer, value); }
 
         public FixMethod FixMethods { get => GetValue(() => FixMethods); set => SetValue(() => FixMethods, value); }
+
+        public bool KeepNameWithSelectedPlayer { get => GetValue(() => KeepNameWithSelectedPlayer); set => SetValue(() => KeepNameWithSelectedPlayer, value); }
 
         public DelegateCommand SetTMAPICommand { get; }
 
@@ -57,7 +59,7 @@ namespace Mw3_Fix_Online.ViewModels
 
         public DelegateCommand AddSelectedPlayerCommand { get; }
 
-        public DelegateCommand<bool> FixWithSelectedPlayerCommand { get; }
+        public DelegateCommand FixWithSelectedPlayerCommand { get; }
 
         public MainViewModel()
         {
@@ -91,7 +93,7 @@ namespace Mw3_Fix_Online.ViewModels
             FixAccountCommand = new DelegateCommand<bool>(keepName => FixAccount(keepName), keepName => CanExecuteAttached());
             RefreshPlayerCommand = new DelegateCommand(RefreshPlayer, CanExecuteAttached);
             AddSelectedPlayerCommand = new DelegateCommand(AddSelectedPlayer, CanExecuteAddSelectedPlayer);
-            FixWithSelectedPlayerCommand = new DelegateCommand<bool>(keepName => FixWithSelectedPlayer(keepName), keepName => CanExecuteFixWithSelectedPlayer());
+            FixWithSelectedPlayerCommand = new DelegateCommand(FixWithSelectedPlayer, CanExecuteFixWithSelectedPlayer);
             RefreshSavedPlayer();
         }
 
@@ -145,21 +147,13 @@ namespace Mw3_Fix_Online.ViewModels
 
         private bool CanExecuteAddSelectedPlayer()
         {
-            if (SelectedPlayer is null)
-                return false;
-            List<Player> players = new List<Player>();
-            foreach (Player player in SelectedPlayer)
-            {
-                players.Add(player);
-            }
-            return players.Where(p => VerificationForAdd(p.Name, p.XUID) ||
-                   SavedPlayers.Select(p2 => p2.Name).Contains(p.Name) &&
-                   SavedPlayers.Select(p2 => p2.XUID).Contains(p.XUID)).Count() == 0;
+            return SelectedPlayer != null && Players.Where(p => (VerificationForAdd(p.Name, p.XUID) ||
+            SavedPlayers.Any(p2 => p2.Name == p.Name && p2.XUID == p.XUID)) && p.IsSelected).Count() == 0;
         }
 
         private bool CanExecuteFixWithSelectedPlayer()
         {
-            return IsAttached && SelectedPlayer?.Count() == 1;
+            return IsAttached && SelectedPlayer != null && Players.Where(p => p.IsSelected).Count() == 1;
         }
         #endregion CanExecute
 
@@ -269,16 +263,15 @@ namespace Mw3_Fix_Online.ViewModels
 
         private void AddSelectedPlayer()
         {
-            foreach (Player player in SelectedPlayer)
+            foreach (Player player in Players.Where(p => p.IsSelected))
                 PlayerLib.Log(player);
             RefreshSavedPlayer();
         }
 
-        private void FixWithSelectedPlayer(bool keepName)
+        private void FixWithSelectedPlayer()
         {
             backgroundFunctionsEnabled = false;
-            Player player = SelectedPlayer.FirstOrDefault() as Player;
-            Functions.FixAccount(player.Name, player.ZipCode, player.XUID, keepName);
+            Functions.FixAccount(SelectedPlayer.Name, SelectedPlayer.Zipcode, SelectedPlayer.XUID, KeepNameWithSelectedPlayer);
             backgroundFunctionsEnabled = true;
         }
 

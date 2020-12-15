@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using IgrisLib.Mvvm;
 
 namespace Mw3_Fix_Online.Core
 {
-    public class Player
+    public class Player : ViewModelBase
     {
         public uint Id { get; set; }
 
@@ -24,7 +20,7 @@ namespace Mw3_Fix_Online.Core
 
         public string NatType { get; set; }
 
-        public string ZipCode { get; set; }
+        public string Zipcode { get; set; }
 
         public string XUID { get; set; }
 
@@ -67,5 +63,7 @@ namespace Mw3_Fix_Online.Core
         public int PrestigeBO { get; set; }
 
         public int LevelBO { get; set; }
+
+        public bool IsSelected { get => GetValue(() => IsSelected); set => SetValue(() => IsSelected, value); }
     }
 }

@@ -42,9 +42,9 @@ namespace Mw3_Fix_Online.Core
             {
                 if (player.Name != "" && player.XUID != "0000000000000000")
                 {
-                    if (!File.ReadAllText(Link).Contains($"{player.Name} | {player.XUID} | {player.ZipCode}"))
+                    if (!File.ReadAllText(Link).Contains($"{player.Name} | {player.XUID} | {player.Zipcode}"))
                     {
-                        File.AppendAllText(Link, $"{player.Name} | {player.XUID} | {player.ZipCode}\n");
+                        File.AppendAllText(Link, $"{player.Name} | {player.XUID} | {player.Zipcode}\n");
                     }
                 }
             }
@@ -55,9 +55,9 @@ namespace Mw3_Fix_Online.Core
             MakeFile();
             if (player.Name != "" && player.XUID != "0000000000000000")
             {
-                if (!File.ReadAllText(Link).Contains($"{player.Name} | {player.XUID} | {player.ZipCode}"))
+                if (!File.ReadAllText(Link).Contains($"{player.Name} | {player.XUID} | {player.Zipcode}"))
                 {
-                    File.AppendAllText(Link, $"{player.Name} | {player.XUID} | {player.ZipCode}\n");
+                    File.AppendAllText(Link, $"{player.Name} | {player.XUID} | {player.Zipcode}\n");
                 }
             }
         }
